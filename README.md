@@ -7,10 +7,37 @@ Simple vue.js 2.0 tab component
 
 https://jsfiddle.net/mikemenaker/c5941ygx/
 
-## Installation:
+## Installation
+### With npm:
+```bash
+npm i v-json-tree --save
+```
 
-``` html
-<script src="https://cdn.rawgit.com/mikemenaker/vue-tabs/1.0.0/src/v-tabs.js"></script>	
+### With a CDN:
+```html
+<!-- In <head> -->
+<meta rel="stylesheet" href="https://unpkg.com/v-json-tree/dist/v-json-tree.css">
+<!-- In <body>, after Vue import -->
+<script src="https://unpkg.com/v-json-tree/dist/v-json-tree.js"></script>
+```
+
+## Usage
+### With an ES6 bundler (via npm)
+In your index file
+```js
+import JsonTree from 'v-json-tree'
+Vue.use(JsonTree)
+```
+
+### With a CDN
+```html
+<script>
+    Vue.use(JsonTree)
+
+    new Vue({
+        // ...
+    })
+</script>
 ```
 
 ## Tab Props:
