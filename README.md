@@ -10,29 +10,29 @@ https://jsfiddle.net/mikemenaker/c5941ygx/
 ## Installation
 ### With npm:
 ```bash
-npm i v-json-tree --save
+npm i vtabs --save
 ```
 
 ### With a CDN:
 ```html
 <!-- In <head> -->
-<meta rel="stylesheet" href="https://unpkg.com/v-json-tree/dist/v-json-tree.css">
+<meta rel="stylesheet" href="https://unpkg.com/vtabs/dist/vtabs.css">
 <!-- In <body>, after Vue import -->
-<script src="https://unpkg.com/v-json-tree/dist/v-json-tree.js"></script>
+<script src="https://unpkg.com/vtabs/dist/vtabs.js"></script>
 ```
 
 ## Usage
 ### With an ES6 bundler (via npm)
 In your index file
 ```js
-import JsonTree from 'v-json-tree'
-Vue.use(JsonTree)
+import vTabs from 'vtabs'
+Vue.use(vTabs)
 ```
 
 ### With a CDN
 ```html
 <script>
-    Vue.use(JsonTree)
+    Vue.use(Tabs)
 
     new Vue({
         // ...
@@ -61,40 +61,4 @@ Vue.use(JsonTree)
     </tab>
   </tabs>
 </div>
-```
-
-## Styling:
-- Tabs header is ul/li
-
-```css
-.tabs > ul {
-  overflow: hidden;
-  font: bold 10px Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
-}
-
-.tabs > ul li {
-  float: left;
-  list-style: none;
-  background: #ddd;
-  border: 1px solid #f5f7fa;
-  color: #666;
-  cursor: pointer;
-  display: block;
-  padding: 0 30px;
-  text-decoration: none;
-  border-top: 1px solid #ddd;
-}
-
-.tabs > ul li:hover {
-  background: #eee;
-  text-decoration: none;
-}
-
-.tabs > ul li.active {
-  color: #333;
-  background: #f5f7fa;
-}
 ```

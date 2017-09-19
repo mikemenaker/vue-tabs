@@ -1,16 +1,17 @@
 <template>
-    <div>
-        <div v-show="active" :class="{'active': active}">
+    <transition :name="slideType"  @after-leave="afterLeave">
+        <div v-show="active" v-bind:class="{'active': active}">
             <slot></slot>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
     export default {
         data() {
             return {
-                active: false
+                active: false,
+                slideType: "slide-left"
             };
         },
         props: {
@@ -24,11 +25,16 @@
                 default: false
             }
         },
-        created: function () {
+        created() {
             this.active = this.isActive;
         },
-        mounted: function () {
+        mounted() {
             this.$parent.addTab(this);
+        },
+        methods: {
+            afterLeave() {
+                this.$parent.activateTab();
+            }
         }
     }
 </script>
