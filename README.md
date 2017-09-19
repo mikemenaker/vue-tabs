@@ -7,10 +7,37 @@ Simple vue.js 2.0 tab component
 
 https://jsfiddle.net/mikemenaker/c5941ygx/
 
-## Installation:
+## Installation
+### With npm:
+```bash
+npm i vtabs --save
+```
 
-``` html
-<script src="https://cdn.rawgit.com/mikemenaker/vue-tabs/1.0.0/src/v-tabs.js"></script>	
+### With a CDN:
+```html
+<!-- In <head> -->
+<meta rel="stylesheet" href="https://unpkg.com/vtabs/dist/vtabs.css">
+<!-- In <body>, after Vue import -->
+<script src="https://unpkg.com/vtabs/dist/vtabs.js"></script>
+```
+
+## Usage
+### With an ES6 bundler (via npm)
+In your index file
+```js
+import vTabs from 'vtabs'
+Vue.use(vTabs)
+```
+
+### With a CDN
+```html
+<script>
+    Vue.use(Tabs)
+
+    new Vue({
+        // ...
+    })
+</script>
 ```
 
 ## Tab Props:
@@ -34,40 +61,4 @@ https://jsfiddle.net/mikemenaker/c5941ygx/
     </tab>
   </tabs>
 </div>
-```
-
-## Styling:
-- Tabs header is ul/li
-
-```css
-.tabs > ul {
-  overflow: hidden;
-  font: bold 10px Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 10px;
-}
-
-.tabs > ul li {
-  float: left;
-  list-style: none;
-  background: #ddd;
-  border: 1px solid #f5f7fa;
-  color: #666;
-  cursor: pointer;
-  display: block;
-  padding: 0 30px;
-  text-decoration: none;
-  border-top: 1px solid #ddd;
-}
-
-.tabs > ul li:hover {
-  background: #eee;
-  text-decoration: none;
-}
-
-.tabs > ul li.active {
-  color: #333;
-  background: #f5f7fa;
-}
 ```
